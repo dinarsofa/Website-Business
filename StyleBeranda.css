@@ -72,7 +72,7 @@ body, h1, h2, h3, p, ul, li {
       background-color: rgb(255, 255, 255);
     }
     .menu{
-      max-width: 100%;
+      max-width: 67%;
       margin: 0;
       overflow: hidden;
       padding: 0;
@@ -96,7 +96,7 @@ body, h1, h2, h3, p, ul, li {
     }
     .imglayanan
     {
-      max-width: 100%;
+      max-width: 67%;
     }
   
     .img1{
@@ -121,12 +121,12 @@ body, h1, h2, h3, p, ul, li {
     }  
     .textbox{
       position: relative;
-      max-width:100%;
+      max-width:67%;
       padding: 140px 300px;
     }
     .textbox1{
       position: relative;
-      max-width:100%;
+      max-width:67%;
       padding: 140px 30px;
     }
       .maincontent{
@@ -274,7 +274,7 @@ body, h1, h2, h3, p, ul, li {
   
       .img1:hover {
         content: url("request.jpg");
-        max-width:100%;
+        max-width:67%;
       }
       
 
