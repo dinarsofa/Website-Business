@@ -1,0 +1,280 @@
+
+
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    }
+    /*Mereset margin dan padding ke nilai nol untuk elemen body, h1, h2, h3, p, ul, dan li */
+    
+    
+    body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f9f9f9;
+    
+    }
+    /*Mengatur font-family, line-height, dan background-color pada elemen body */
+    
+    header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    }
+    /* Mengatur background-color, color, dan padding pada elemen header */
+    
+    nav ul {
+    list-style-type: none;
+    background-color: #6b6b6b;
+    text-align: center;
+    }
+    /* Mengatur list-style-type, background-color, dan text-align pada elemen ul di dalam elemen nav */
+    
+    nav ul li {
+    display: inline-block;
+    margin: 15px;
+    }
+    /* Mengatur display dan margin pada elemen li di dalam elemen ul di dalam elemen nav */
+    
+    nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 10px;
+    }
+    /* Mengatur text-decoration, color, dan padding pada elemen a di dalam elemen li di dalam elemen ul di dalam elemen nav */
+    .button {
+    display: inline-block;
+    background-color: #74bdcb;
+    color: #fff;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 10px;
+    }
+    .content{
+      padding-top: 90px;
+      background-color: rgb(255, 255, 255);
+    }
+    .content1{
+      padding-top: 10;
+      background-color: rgb(255, 255, 255);
+    }
+    .contentt1{
+      padding-top: 0px;
+      background-color: #b2abab;
+    }
+    .contentt2{
+      padding-top: 0px;
+      padding: 0px 300px;
+      background-color: rgb(255, 255, 255);
+    }
+     .content2{
+      padding-top: 0px;
+      background-color: rgb(255, 255, 255);
+    }
+    .menu{
+      max-width: 100%;
+      margin: 0;
+      overflow: hidden;
+      padding: 0;
+      font-size: 10;
+    }
+     .layanan{
+      text-align: center;
+    }
+    .layanan1{
+      display: inline-block;
+      width: calc(100% / 4);
+      padding: 100px;
+      box-sizing: border-box;
+      justify-content: space-between;
+    } 
+    .layanan1 :hover {
+      transform: scale(1.2);
+    }
+    .layanan2 :hover {
+      transform: scale(1.1);
+    }
+    .imglayanan
+    {
+      max-width: 100%;
+    }
+  
+    .img1{
+      position: relative;
+    }
+    img.kiri {
+      float: left;
+      margin-right: 10px;
+    }
+   
+    
+    h2 {
+      font-size: 20px;
+      
+    }  
+    h3 {
+      font-size: 30px;
+      font-style: oblique;
+    }  
+    h4 {
+      font-size: 40px;
+    }  
+    .textbox{
+      position: relative;
+      max-width:100%;
+      padding: 140px 300px;
+    }
+    .textbox1{
+      position: relative;
+      max-width:100%;
+      padding: 140px 30px;
+    }
+      .maincontent{
+      position: relative;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      text-align: center;
+    }
+    .button {
+      display: inline-block;
+      background-color: #74bdcb;
+      color: #fff;
+      padding: 15px 40px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 16px;}
+
+      
+      .footer{
+        background: #b2abab;
+        padding:30px 0px;
+        font-family: 'Play', sans-serif;
+        text-align:center;
+        }
+        
+        .footer .row{
+        width:100%;
+        margin:1% 0%;
+        padding:0.6% 0%;
+        color:rgb(0, 0, 0);
+        font-size:16px;
+        }
+        
+        .footer .row a{
+        text-decoration:none;
+        color:rgb(0, 0, 0);
+        transition:0.5s;
+        }
+        
+        .footer .row a:hover{
+        color:#fff;
+        }
+        
+        .footer .row ul{
+        width:100%;
+        }
+        
+        .footer .row ul li{
+        display:inline-block;
+        margin:0px 30px;
+        }
+        
+        .footer .row a i{
+        font-size:2em;
+        margin:0% 1%;
+        }
+        
+        @media (max-width:720px){
+        .footer{
+        text-align:left;
+        padding:5%;
+        }
+        .footer .row ul li{
+        display:block;
+        margin:10px 0px;
+        text-align:left;
+        }
+        .footer .row a i{
+        margin:0% 3%;
+        }
+        }
+        .collection-item__image {
+          overflow: hidden;
+          display: block;
+          border-bottom: 1px solid var(--border);
+          transition: transform 0.3s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+      }
+
+      h1 {
+        text-align: center;
+      }
+      
+      p {
+        text-align: center;
+      }
+      
+      a {
+        color: #232323;
+        text-decoration: none;
+        font-weight: 500;
+      }
+      
+      a:hover {
+        text-decoration: underline;
+      }
+      
+      .wrapper {
+        width: 700px;
+        margin: 0 auto;
+      }
+      .wrapper1 {
+        width: 900px;
+        margin: 0 ;
+      }
+      
+      .zoom-effect {
+        position: relative;
+        width: 100%;
+        height: 360px;
+        margin: 0 auto;
+        overflow: hidden;
+        border: 5px solid rgb(255, 255, 255);
+      }
+      .zoom-effect1 {
+        position: relative;
+        width: 100%;
+        height: 800px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      .kotak {
+        position: absolute;
+        top: 0;
+        left: 0;
+        
+      }
+      
+      .kotak img {
+        -webkit-transition: 0.4s ease;
+        transition: 0.4s ease;
+        width: 700px;
+      }
+      
+      .zoom-effect:hover .kotak img {
+        -webkit-transform: scale(1.08);
+        transform: scale(1.08);
+      }
+
+      .inner-box {
+        border: 1px solid rgb(0, 0, 0);
+        padding: 10px;
+      }
+
+  
+      .img1:hover {
+        content: url("request.jpg");
+        max-width:100%;
+      }
+      
+
