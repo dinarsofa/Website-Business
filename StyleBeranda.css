@@ -64,7 +64,6 @@ body, h1, h2, h3, p, ul, li {
     }
     .contentt2{
       padding-top: 0px;
-           padding: 0px 300px;
       background-color: rgb(255, 255, 255);
     }
      .content2{
@@ -119,6 +118,9 @@ body, h1, h2, h3, p, ul, li {
     h4 {
       font-size: 40px;
     }  
+   h5{
+      font-size: 15px;
+    }
     .textbox{
       position: relative;
       max-width:100%;
@@ -236,7 +238,7 @@ body, h1, h2, h3, p, ul, li {
       .zoom-effect {
         position: relative;
         width: 100%;
-        height: 360px;
+        height: 240px;
         margin: 0 auto;
         overflow: hidden;
         border: 5px solid rgb(255, 255, 255);
@@ -244,7 +246,7 @@ body, h1, h2, h3, p, ul, li {
       .zoom-effect1 {
         position: relative;
         width: 100%;
-        height: 800px;
+        height: 600px;
         margin: 0 auto;
         overflow: hidden;
       }
