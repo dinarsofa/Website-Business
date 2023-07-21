@@ -64,6 +64,7 @@ body, h1, h2, h3, p, ul, li {
     }
     .contentt2{
       padding-top: 0px;
+           padding: 0px 300px;
       background-color: rgb(255, 255, 255);
     }
      .content2{
