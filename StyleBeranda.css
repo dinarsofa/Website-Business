@@ -276,7 +276,7 @@ body, h1, h2, h3, p, ul, li {
   
       .img1:hover {
         content: url("request.jpg");
-        width:90%;
+        width:80%;
       }
       
 
