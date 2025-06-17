@@ -1,58 +1,218 @@
 <!DOCTYPE html>
-<!--Mendefinisikan tipe dokumen HTML.-->
 <html lang="en">
-<!--Memulai elemen HTML dan menentukan bahasa dokumen (dalam hal ini bahasa Inggris).-->
 
 <head>
-  <!--Memulai elemen kepala dokumen yang berisi informasi tentang dokumen.-->
   <meta charset="UTF-8">
-  <!--Mendefinisikan pengaturan karakter untuk dokumen menggunakan karakter set UTF-8.-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!--Mendefinisikan pengaturan tampilan responsif untuk perangkat seluler dengan lebar tampilan yang mengikuti perangkat dan tingkat zoom awal yang ditetapkan ke 1.0.-->
   <title>DinarSofa</title>
-  <!--Menetapkan judul dokumen menjadi "Dinarsofa".-->
-  <link rel="stylesheet" href="StyleBeranda.css">
-  <!-- Menghubungkan file CSS eksternal dengan dokumen HTML menggunakan atribut rel untuk menentukan tipe relasi sebagai "stylesheet" dan atribut href untuk menentukan lokasi file CSS.-->
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      line-height: 1.6;
+      background-color: #fff;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      background-color: #f4f4f4;
+    }
+
+    header img {
+      margin-right: 10px;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      list-style: none;
+      justify-content: center;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0;
+    }
+
+    nav ul li a {
+      display: block;
+      padding: 1em;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    nav ul li a:hover {
+      background-color: #575757;
+    }
+
+    .simple1 img {
+      width: 100%;
+      height: auto;
+      max-height: 700px;
+      object-fit: cover;
+    }
+
+    .simple1 span {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 20px;
+      color: white;
+      text-align: center;
+      width: 80%;
+    }
+
+    section .content2 {
+      padding: 2em;
+    }
+
+    .textbox {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .wrapper1 {
+      flex: 1;
+      padding: 1em;
+      max-width: 100%;
+    }
+
+    .zoom-effect1 .kotak {
+      overflow: hidden;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+    }
+
+    .textbox1 {
+      padding: 1em;
+    }
+
+    .textbox1 ul {
+      margin-left: 1.5em;
+    }
+
+    .textbox1 li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #333;
+      color: white;
+      text-align: center;
+      padding: 2em 1em;
+    }
+
+    footer .row {
+      margin-bottom: 1em;
+    }
+
+    footer .row a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-size: 20px;
+    }
+
+    footer ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 0;
+    }
+
+    footer ul li {
+      margin: 0 15px;
+    }
+
+    footer ul li a {
+      color: white;
+      text-decoration: none;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .simple1 span {
+        font-size: 16px;
+      }
+
+      .textbox1 h5,
+      .textbox h5 {
+        font-size: 14px;
+      }
+
+      .textbox1 h3 {
+        font-size: 18px;
+      }
+
+      .simple1 img {
+        height: auto;
+      }
+
+      .simple1 span h2 {
+        font-size: 18px;
+      }
+
+      .textbox1 ul {
+        margin-left: 1em;
+      }
+
+      .textbox1 li {
+        font-size: 14px;
+      }
+    }
+
+    @media (min-width: 769px) {
+      .flex-container {
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <!-- Memulai elemen header yang berisi judul utama dari halaman web.-->
     <a href="index.html">
       <img src="dr-removebg-preview.png" alt="DinarSofa" width="50" height="50">
-      <!--Menampilkan judul utama "Dinarsofa" di dalam elemen heading level 1 (h1).-->
+    </a>
   </header>
 
   <nav>
-    <!--Memulai elemen navigasi yang berisi tautan menu untuk navigasi halaman web.-->
     <ul>
-      <!--Memulai elemen daftar tak-berurutan (unordered list) yang berisi daftar tautan menu.-->
       <li><a href="Material.html">Material</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href kosong (#) yang menunjukkan tautan tidak mengarah ke halaman lain.-->
       <li><a href="produk.html">Shop by Type</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href yang mengarah ke "".-->
       <li><a href="About.html">About</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href yang mengarah ke "".-->
-
-
+    </ul>
   </nav>
 
   <div class="simple1">
     <div style="position:relative;">
-      <!--untuk meletakkan objek pada sebuah konten-->
-      <img src="polyester.jpg" alt="OIP" style="width:100%; height: 60em;">
-      <!--untuk memasukan gambar-->
-      <span style="position:absolute;top:40%;left:52%;transform:translate(-50%,-50%);font-size:33px;color:white;">
-
-        <!--untuk memasukan tulian ke gambar-->
-        <br><br><br><br>
+      <img src="polyester.jpg" alt="OIP">
+      <span>
         <h2>
-          <center>
-            <p>Mewah. Terjangkau. Furnitur segala Ruangan Segala Cuaca.</p>
-            <p>Wujudkan Visi Anda tentang Kenyamanan & Gaya</p>
-            <br><br>
-            <br><br><br><br>
-
+          <p>Mewah. Terjangkau. Furnitur segala Ruangan Segala Cuaca.</p>
+          <p>Wujudkan Visi Anda tentang Kenyamanan & Gaya</p>
         </h2>
       </span>
     </div>
@@ -61,9 +221,7 @@
   <section>
     <div class="content2">
       <div class="textbox">
-        <center>
-          <h4>dinarsofa_furnituresolo</h4>
-        </center>
+        <center><h4>dinarsofa_furnituresolo</h4></center>
         <h5>Jati adalah kayu keras tropis yang berasal dari Asia Tenggara, dan telah digunakan selama berabad-abad untuk
           membuat furnitur luar ruangan karena ketahanan alaminya terhadap air, hama, dan pembusukan. Jati dikenal
           dengan warna cokelat keemasan dan minyak alaminya, yang memberikan tekstur dan daya tahan yang unik. Seiring
@@ -73,14 +231,13 @@
     </div>
   </section>
 
-  <div style="display: flex;">
+  <div class="flex-container">
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
           <div class="textbox1">
             <h3>Awal Terbentuknya Toko Dinar Sofa </h3>
-            <br>
-            <h5>Toko Sofa kami didirikan pada tahun 2005 oleh Mbak Dinar, seorang yang memiliki minat dan pengetahuan
+            <h5>oko Sofa kami didirikan pada tahun 2005 oleh Mbak Dinar, seorang yang memiliki minat dan pengetahuan
               dalam industri furnitur. Berawal dari kecintaannya terhadap desain interior dan kebutuhan akan furnitur
               berkualitas, Mbak Dinar melihat peluang untuk membuka toko yang khusus menyediakan koleksi sofa yang
               elegan dan nyaman.
@@ -92,7 +249,7 @@
               Seiring dengan bertambahnya popularitas toko kami, kami mulai memperluas koleksi sofa yang kami tawarkan.
               Kami menjalin kemitraan dengan beberapa produsen dan pemasok terpercaya untuk memperluas pilihan dan
               meningkatkan kualitas produk kami. Koleksi kami mencakup berbagai gaya, mulai dari klasik hingga modern,
-              dan memperhatikan beragam preferensi pelanggan.</h5>
+              daan memperhatikan beragam preferensi pelanggan.</h5>
           </div>
         </div>
       </div>
@@ -100,16 +257,17 @@
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
-          <img src=sofa6.jpg alt="Gambar" style="width: 100%; height: auto;">
+          <img src="sofa6.jpg" alt="Gambar" style="width:100%;">
         </div>
       </div>
     </div>
   </div>
-  <div style="display: flex;">
+
+  <div class="flex-container">
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
-          <img src=sofa7.jpg alt="Gambar" style="width: 100%; height: auto;">
+          <img src="sofa7.jpg" alt="Gambar" style="width:100%;">
         </div>
       </div>
     </div>
@@ -118,25 +276,17 @@
         <div class="kotak">
           <div class="textbox1">
             <h3>VISI DAN MISI </h3>
-            <br>
             <h5>
               <center>Visi:</center>
-              <br>
-              
-              Menjadi toko sofa terkemuka dan terpercaya yang memberikan solusi desain interior yang inovatif dan
+               Menjadi toko sofa terkemuka dan terpercaya yang memberikan solusi desain interior yang inovatif dan
               kualitas produk terbaik bagi pelanggan kami.
-              <br>
-              <br>
               <center>Misi:</center>
-              <br>
               <ul>
-                <li>
-                  Menyediakan koleksi sofa berkualitas tinggi: Kami berkomitmen untuk menyediakan koleksi sofa yang
+                <li>Menyediakan koleksi sofa berkualitas tinggi: Kami berkomitmen untuk menyediakan koleksi sofa yang
                   berkualitas tinggi, baik dalam desain, kenyamanan, dan bahan. Kami bekerja sama dengan produsen
                   terpercaya
                   dan terpilih untuk memastikan produk yang kami tawarkan memenuhi standar kualitas yang tinggi.</li>
-                <li>
-                  Memberikan pengalaman pelanggan yang luar biasa: Kami ingin setiap pelanggan merasa diperlakukan
+                <li> Memberikan pengalaman pelanggan yang luar biasa: Kami ingin setiap pelanggan merasa diperlakukan
                   dengan
                   baik dan puas dengan layanan yang kami berikan. Staf kami yang berpengalaman akan membantu pelanggan
                   dalam
@@ -151,35 +301,30 @@
       </div>
     </div>
   </div>
-  <div style="display: flex;">
+
+  <div class="flex-container">
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
           <div class="textbox1">
-
-            <br>
-            <h5>
-              <ul>
-                <li> Menghadirkan solusi desain interior yang inovatif: Kami menyadari bahwa sofa bukan hanya menjadi
+            <ul>
+              <li> Menghadirkan solusi desain interior yang inovatif: Kami menyadari bahwa sofa bukan hanya menjadi
                   furnitur fungsional, tetapi juga merupakan elemen penting dalam estetika dan desain interior. Kami
                   akan
                   terus memperbarui koleksi kami dengan tren terbaru dalam desain sofa, sehingga pelanggan kami dapat
                   menemukan pilihan yang sesuai dengan gaya dan kebutuhan mereka.</li>
-
-                <li> Memastikan harga yang kompetitif: Kami berkomitmen untuk memberikan harga yang kompetitif dan adil
+              <li> Memastikan harga yang kompetitif: Kami berkomitmen untuk memberikan harga yang kompetitif dan adil
                   untuk produk-produk kami. Kami akan bekerja sama dengan pemasok dan produsen untuk memastikan bahwa
                   kami
                   dapat menawarkan harga yang terjangkau tanpa mengorbankan kualitas.</li>
-
-                <li> Meningkatkan keberlanjutan: Kami sadar akan dampak industri furnitur terhadap lingkungan. Oleh
+              <li>Meningkatkan keberlanjutan: Kami sadar akan dampak industri furnitur terhadap lingkungan. Oleh
                   karena
                   itu, kami berkomitmen untuk memilih dan mendukung produsen yang peduli terhadap keberlanjutan dan
                   menjaga
                   jejak karbon yang rendah. Kami juga akan mengedukasi pelanggan kami tentang pilihan ramah lingkungan
                   dan
-                  mengurangi limbah melalui praktik daur ulang dan pengemasan yang efisien</li>
-              </ul>
-            </h5>
+                  mengurangi limbah melalui praktik daur ulang dan pengemasan yang efisien.</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -187,16 +332,17 @@
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
-          <img src=S1.jpg alt="Gambar" style="width: 100%; height: auto;">
+          <img src="S1.jpg" alt="Gambar" style="width:100%;">
         </div>
       </div>
     </div>
   </div>
-  <div style="display: flex;">
+
+  <div class="flex-container">
     <div class="wrapper1">
       <div class="zoom-effect1">
         <div class="kotak">
-          <img src=S2.jpg alt="Gambar" style="width: 100%; height: auto;">
+          <img src="S2.jpg" alt="Gambar" style="width:100%;">
         </div>
       </div>
     </div>
@@ -204,51 +350,38 @@
       <div class="zoom-effect1">
         <div class="kotak">
           <div class="textbox1">
-            <br>
-            <br>
-            <br>
-              
-            <h3>DI DESAIN SESUAI DENGAN KEINGINAN ANDA </h3>
-            <br>
+            <h3>DI DESAIN SESUAI DENGAN KEINGINAN ANDA</h3>
             <h5>Koleksi kami dirancang untuk memenuhi kebutuhan pelanggan kami. Desain furnitur ruangan modular
               memungkinkan berbagai konfigurasi sehingga Anda dapat menemukan yang paling cocok untuk ruangan Anda.
               Setiap koleksi menampilkan furnitur sectional yang serasi, set makan, daybed, set percakapan dengan kursi
-              klub, kursi santai, ottoman, dan meja akhir yang tersedia untuk mewujudkan impian hidup Anda.</h5>
+              klub, kursi santai, ottoman, dan meja akhir yang tersedia untuk mewujudkan impian hidup Anda..</h5>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <!--FONT AWESOME-->
+  <!-- FONT AWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <body>
-    <footer>
-      <div class="footer">
-        <div class="row">
-          <a href="https://www.facebook.com/hiba.almaqdashy.1?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-          <a href="https://instagram.com/dinarsofa_furnituresolo?igshid=MzRlODBiNWFlZA=="><i
-              class="fa fa-instagram"></i></a>
-          <a
-            href="https://api.whatsapp.com/send/?phone=%2B6281328742005&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0"><i
-              class="fa fa-whatsapp"></i></a>
-        </div>
-
-        <div class="row">
-          <ul>
-            <li><a href="policy.html">Return Policy</a></li>
-            <li><a href="testimoni.html">Testimoni</a></li>
-          </ul>
-        </div>
-
-        <div class="row">
-          DINARSOFA Copyright © 2023 DINARSOFA - All rights reserved || Designed By: DNB
-        </div>
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <a href="https://www.facebook.com/hiba.almaqdashy.1?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+        <a href="https://instagram.com/dinarsofa_furnituresolo?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B6285747320337&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0"><i class="fa fa-whatsapp"></i></a>
+    
+      <div class="row">
+        <ul>
+          <li><a href="policy.html">Return Policy</a></li>
+          <li><a href="testimoni.html">Testimoni</a></li>
+        </ul>
       </div>
-    </footer>
-
-  </body>
+      <div class="row">
+        DINARSOFA Copyright © 2023 DINARSOFA - All rights reserved || Designed By: DNB
+      </div>
+    </div>
+  </footer>
+</body>
 
 </html>
-<!--Mengakhiri perintah-->
