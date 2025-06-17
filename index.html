@@ -1,228 +1,340 @@
 <!DOCTYPE html>
-<!--Mendefinisikan tipe dokumen HTML.-->
 <html lang="en">
-<!--Memulai elemen HTML dan menentukan bahasa dokumen (dalam hal ini bahasa Inggris).-->
-<script src="script.js"></script>
-<head>
-  <!--Memulai elemen kepala dokumen yang berisi informasi tentang dokumen.-->
-  <meta charset="UTF-8">
-  <!--Mendefinisikan pengaturan karakter untuk dokumen menggunakan karakter set UTF-8.-->
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!--Mendefinisikan pengaturan tampilan responsif untuk perangkat seluler dengan lebar tampilan yang mengikuti perangkat dan tingkat zoom awal yang ditetapkan ke 1.0.-->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DinarSofa</title>
-  <!--Menetapkan judul dokumen menjadi "Dinarsofa".-->
   <link rel="stylesheet" href="StyleBeranda.css">
-  <!-- Menghubungkan file CSS eksternal dengan dokumen HTML menggunakan atribut rel untuk menentukan tipe relasi sebagai "stylesheet" dan atribut href untuk menentukan lokasi file CSS.-->
+  <script src="script.js" defer></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+      color: #333;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      background: #fff;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+      background: #333;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .simple1 {
+      position: relative;
+      text-align: center;
+    }
+
+    .simple1 img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .simple1 .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.4);
+      text-align: center;
+    }
+
+    .simple1 .text-overlay h2 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .simple1 .text-overlay p {
+      font-size: 1rem;
+      text-shadow: 1px 1px 2px #000;
+    }
+
+    .button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    h1, h2, h3, h4 {
+      margin-bottom: 10px;
+    }
+
+    .layanan,
+    .contentt1,
+    .contentt2 {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .layanan1 {
+      flex: 1 1 200px;
+      max-width: 300px;
+      padding: 15px;
+      background-color: #f8f8f8;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .imglayanan {
+      width: 100%;
+      max-width: 150px;
+      margin-bottom: 10px;
+    }
+
+    .maincontent {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .textbox {
+      max-width: 700px;
+      padding: 20px;
+      line-height: 1.8;
+    }
+
+    .wrapper {
+      flex: 1 1 200px;
+      padding: 10px;
+      max-width: 300px;
+    }
+
+    .zoom-effect .kotak img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .zoom-effect:hover .kotak img {
+      transform: scale(1.05);
+    }
+
+    .inner-box p {
+      font-size: 24px;
+      margin: 20px 0;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+
+    .footer .row {
+      margin: 10px 0;
+    }
+
+    .footer ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .footer ul li a,
+    .footer a {
+      color: white;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .simple1 .text-overlay h2 {
+        font-size: 1.2rem;
+      }
+
+      .simple1 .text-overlay p {
+        font-size: 0.9rem;
+      }
+
+      .menu,
+      .maincontent,
+      .wrapper {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .inner-box p {
+        font-size: 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
   <header>
-    <!-- Memulai elemen header yang berisi judul utama dari halaman web.-->
     <a href="index.html">
-      <img src="dr-removebg-preview.png" alt="DinarSofa" width="50" height="50">
-      <!--Menampilkan judul utama "Dinarsofa" di dalam elemen heading level 1 (h1).-->
+      <img src="dr-removebg-preview.png" alt="DinarSofa" width="60" height="60">
+    </a>
   </header>
 
   <nav>
-    <!--Memulai elemen navigasi yang berisi tautan menu untuk navigasi halaman web.-->
     <ul>
-      <!--Memulai elemen daftar tak-berurutan (unordered list) yang berisi daftar tautan menu.-->
       <li><a href="Material.html">Material</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href kosong (#) yang menunjukkan tautan tidak mengarah ke halaman lain.-->
       <li><a href="produk.html">Shop by Type</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href yang mengarah ke "".-->
       <li><a href="About.html">About</a></li>
-      <!--Membuat elemen daftar tak-berurutan (list item) yang berisi tautan "" dengan atribut href yang mengarah ke "".-->
-
     </ul>
   </nav>
 
   <div class="simple1">
-    <div style="position:relative;">
-      <!--untuk meletakkan objek pada sebuah konten-->
-      <img src="Velvet2.jpg" alt="Velvet2.jpg" style="width:100%;">
-      <!--untuk memasukan gambar-->
-      <span style="position:absolute;top:35%;left:52%;transform:translate(-50%,-50%);font-size:33px;color:white;">
-        <!--untuk memasukan tulian ke gambar-->
-
-        <h2>
-          <center>
-            <p>Mewah. Terjangkau. Furnitur segala Ruangan Segala Cuaca.</p>
-            <p>Wujudkan Visi Anda tentang Kenyamanan & Gaya</p>
-            <br><br>
-            <br><br><br><br>
-            <center><a
-                href="https://api.whatsapp.com/send/?phone=%2B6281328742005&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0"
-                class="button">Belanja Sekarang</a></center>
-        </h2>
-      </span>
+    <img src="Velvet2.jpg" alt="Velvet2">
+    <div class="text-overlay">
+      <h2>Mewah. Terjangkau. Furnitur segala Ruangan Segala Cuaca.</h2>
+      <p>Wujudkan Visi Anda tentang Kenyamanan & Gaya</p>
+      <a href="https://api.whatsapp.com/send/?phone=%2B6281328742005&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0" class="button">Belanja Sekarang</a>
     </div>
   </div>
+ 
 
-
-  <div class="content"><!--Merupakan bagian isian dari pada html-->
-    <section> <!--Merupakan pemisah agar lebih terstruktur pada html-->
+  <div class="content">
+    <section>
       <div class="layanan">
-        <h1>Layanan </h1>
-        <div class="menu"><!--Merupakan content utama dari services-->
+        <h1>Layanan</h1>
+        <div class="menu">
           <div class="layanan1">
             <img src="1-removebg-preview.png" class="imglayanan">
-            <br><br>
             <h2>Clean</h2>
-            <p>pembersihan yang mengedepankan kualitas</p>
+            <p>Pembersihan yang mengedepankan kualitas</p>
           </div>
-
           <div class="layanan1">
             <img src="sofa.png" class="imglayanan">
             <h2>Garansi</h2>
-            <p>kami memberikan garansi busa sofa selama 2 tahun</p>
+            <p>Kami memberikan garansi busa sofa selama 2 tahun</p>
           </div>
           <div class="layanan1">
             <img src="truk111111111111111-removebg-preview.png" class="imglayanan">
-            <br> <br>
             <h2>Pengiriman</h2>
-            <p>pengiriman yang tidak kalah cepat dengan pesaing kami</p>
+            <p>Pengiriman yang tidak kalah cepat dengan pesaing kami</p>
           </div>
         </div>
       </div>
+    </section>
   </div>
-  </section>
-  <div class="contentt1"><!--Merupakan bagian isian dari pada html-->
-    <section> <!--Merupakan pemisah agar lebih terstruktur pada html-->
+
+  <div class="contentt1">
+    <section>
       <div class="maincontent">
         <div class="textbox">
-         
-          <h3>Dirancang dengan mempertimbangkan pelanggan. Bersumber dari bahan-bahan terbaik dunia. </h3>
-          <br>
+          <h3>Dirancang dengan mempertimbangkan pelanggan. Bersumber dari bahan-bahan terbaik dunia.</h3>
           <p>
-            Kami membangun DinarSofa untuk memenuhi kebutuhan pelanggan kami. Dengan produk dengan kualitas
-            terbaik, waktu tunggu tercepat di industri, serta desain dan konfigurasi serbaguna,
-            Baik Anda ingin menjamu tamu dengan set sectional outdoor dan indor, Anda bisa bersantai di dalam rumah anda
-            dan kami juga bisa menjamu anda
-            bersantai di tepi kolam renang, atau
-            bersantap di luar bersama keluarga, koleksi kami menawarkan semuanya, dan kami akan siap membantu
-            Anda di setiap langkah.</p>
-            
+            Kami membangun DinarSofa untuk memenuhi kebutuhan pelanggan kami. Dengan produk berkualitas
+            terbaik, waktu tunggu tercepat di industri, serta desain dan konfigurasi serbaguna.
+            Baik Anda ingin menjamu tamu dengan set sofa outdoor maupun indoor,
+            koleksi kami menawarkan semuanya. Kami siap membantu Anda di setiap langkah.
+          </p>
         </div>
-
-
       </div>
+    </section>
   </div>
-  </section>
+
   <section>
-    <div style="display: flex;">
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=sofa18.jpg alt="Gambar" style="width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=sofa6.jpg alt="Gambar" style="width: 100%; height: 0%;">
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=sofa8.jpg alt="Gambar" style="width: 110%; height: 100%;">
-          </div>
-        </div>
-      </div>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="sofa18.jpg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="sofa6.jpg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="sofa8.jpg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="sofa5.jpg" alt="Gambar"></div></div></div>
+    </div>
 
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=sofa5.jpg alt="Gambar" style="width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
-    </div>
     <div class="inner-box">
+      <center>
       <p>Shop by Type</p>
+</center>
     </div>
-    <div style="display: flex;">
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src= SOFA10.jpeg alt="Gambar" style="width: 85%; height: 100%;">
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=SOFA13.jpg alt="Gambar" style="width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=SOFA11.jpeg alt="Gambar" style="width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
 
-      <div class="wrapper">
-        <div class="zoom-effect">
-          <div class="kotak">
-            <img src=SOFA12.jpg alt="Gambar" style="width: 100%; height: 100%;">
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="inner-box">
-      <p>Shop by Type</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="SOFA10.jpeg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="SOFA13.jpg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="SOFA11.jpeg" alt="Gambar"></div></div></div>
+      <div class="wrapper"><div class="zoom-effect"><div class="kotak"><img src="SOFA12.jpg" alt="Gambar"></div></div></div>
     </div>
   </section>
 
-  
   <div class="contentt2">
+    <center>
     <div class="textbox">
       <h4>Perbedaan Kami</h4>
-      <h2>Kami mendirikan perusahaan kami dengan dedikasi untuk melakukan bisnis dengan cara yang benar, menawarkan
-        layanan pelanggan kelas dunia, produk luar ruangan yang bergaya dan fungsional yang dibangun dengan bahan
-        berkualitas tinggi, dan pengalaman berbelanja yang ingin Anda ceritakan kepada teman-teman Anda.</h2>
-
-
+      <h2>Kami mendirikan perusahaan kami dengan dedikasi untuk melakukan bisnis dengan cara yang benar, menawarkan layanan pelanggan kelas dunia, produk luar ruangan yang bergaya dan fungsional, dibangun dengan bahan berkualitas tinggi, dan pengalaman berbelanja yang ingin Anda ceritakan kepada teman-teman Anda.</h2>
     </div>
+    </center>
   </div>
 
-  <!--FONT AWESOME-->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <footer>
+    <div class="footer">
+      <div class="row">
+        <center>
+        <a href="https://www.facebook.com/hiba.almaqdashy.1?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+        <a href="https://instagram.com/dinarsofa_furnituresolo?igshid=MzRlODBiNWFlZA=="><i class="fa fa-instagram"></i></a>
+        <a href="https://api.whatsapp.com/send/?phone=%2B6285747320337&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0"><i class="fa fa-whatsapp"></i></a>
+        <center>
 
-
-  <body>
-    <footer>
-      <div class="footer">
-        <div class="row">
-          <a href="https://www.facebook.com/hiba.almaqdashy.1?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
-          <a href="https://instagram.com/dinarsofa_furnituresolo?igshid=MzRlODBiNWFlZA=="><i
-              class="fa fa-instagram"></i></a>
-          <a
-            href="https://api.whatsapp.com/send/?phone=%2B6281328742005&text=Assallamualaikum+admin%2C+saya+ingin+order&type=phone_number&app_absent=0"><i
-              class="fa fa-whatsapp"></i></a>
-        </div>
-
-        <div class="row">
-          <ul>
-            <li><a href="policy.html">Return Policy</a></li>
-            <li><a href="testimoni.html">Testimoni</a></li>
-          </ul>
-        </div>
-
-        <div class="row">
-          DINARSOFA Copyright © 2023 DINARSOFA - All rights reserved || Designed By: DNB
-        </div>
       </div>
-    </footer>
-
-  </body>
+      <div class="row">
+        <ul>
+          <li><a href="policy.html">Return Policy</a></li>
+          <li><a href="testimoni.html">Testimoni</a></li>
+        </ul>
+      </div>
+      <div class="row">
+        DINARSOFA &copy; 2023 - All rights reserved || Designed By: DNB
+      </div>
+    </div>
+  </footer>
+</body>
 
 </html>
-<!--Mengakhiri perintah-->
